@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class=" text-uppercase" style="font-size: 3.2rem; letter-spacing: 0.3pt; font-weight: bolder; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:30px; padding-top: 20px; text-align: center;"> Important resource files </h1>
+<form method="GET" action="{% url 'resource_list' %}" class="form-inline mb-4" style="justify-content: center;">
+  <input type="text" name="q" class="form-control mr-sm-2"  value="{{ query }}">
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+  <div class="card"></div>
+
+    <div class="card-body">
+      <ul class="list-group">
+        {% for resource in resources %}
+          <li class="list-group-item">
+            <a href="{{ resource.file.url }}" class="text-primary">{{ resource.title }}</a> ({{ resource.uploaded_at }})
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="card-footer text-center">
+      <button class="btn btn-primary" style="margin: 80px;">
+        <a href="{% url 'upload_resource' %}" class="text-white" style="text-decoration: none;">Upload a new resource</a>
+      </button>
+    </div>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% load static %}
+<link rel="stylesheet"  type="text/css" href="{% static 'css/faq.css' %}">
+<link rel="stylesheet"  type="text/css" href="{% static 'css/styles.css' %}">
+
+<div class="faqs">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true" style="text-decoration: none;">
+                             What services does your chartered accountancy firm provide?
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                We provide a wide range of services to cater to the diverse accounting needs of our clients. Our services include auditing, income tax return filing, GST registration and filing, accounting, finance, and assistance with company law matters. We also provide consultancy services for startups, NGOs, and foreign exchange management act (FEMA).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseTwo" style="text-decoration: none;">
+                             How can I schedule a consultation with your firm for my accounting needs?
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                             You can schedule a consultation with our firm by filling out the contact form on our website or by giving us a call at 011 4022 4920. Our team will be happy to assist you with your accounting needs and provide expert guidance tailored to your requirements.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseThree" style="text-decoration: none;">
+                             Do you specialize in any particular industry or type of client?
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                             We cater to a wide range of clients across various industries, including startups, NGOs, and established businesses. Our team has the expertise and experience to provide tailored accounting solutions to meet the unique needs of each client, regardless of their industry or size.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseFour" style="text-decoration: none;">
+                             Can your firm assist with tax planning, audits, and regulatory compliance?
+                            </a>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                             Yes, our firm specializes in tax planning, audits, and regulatory compliance. We can help you optimize your tax strategy, ensure compliance with relevant laws and regulations, and provide expert guidance to help you navigate the complexities of the tax landscape.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a class="btn" href="faq.html">More</a> -->
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/faq.jpg' %}" alt="Image">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class=" text-uppercase" style="font-size: 3.2rem; letter-spacing: 0.3pt; font-weight: bolder; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:50px; padding-top: 20px; text-align: center;"> Admin Panel </h1>
+  <div class="card-container">
+    <a href="{% url 'list_appointments' %}" class="card" style="margin: 20px; background-color: rgba(191, 242, 255, 0.774);">
+      <h1 class=" text-uppercase" style="font-size: 2.2rem; letter-spacing: 0.3pt;  font-family: Verdana, Geneva, Tahoma, sans-serif; margin:50px; padding: 10px; text-align: center;"> Check Appointments </h1>
+    </a>
+    <a href="{% url 'list_contacts' %}" class="card" style="margin: 100px 20px; background-color: rgba(191, 242, 255, 0.774);">
+      <h1 class=" text-uppercase" style="font-size: 2.2rem; letter-spacing: 0.3pt; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:50px; padding: 10px; text-align: center;"> Check Contact </h1>
+    </a>
+  </div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% load static %}
+{% load latest_posts %}
+
+{% block content %}
+
+<div class="hero">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Who we are?</h2>
+                <h2 style="color: rgb(48, 100, 146); font-size: 28px;"><span class="text sec-text">Renowned CA firms in East Delhi</span></h2>
+                <p>Specializing in auditing, GST filing, accounting guidance, and expert management of financial affairs for NGOs and startups, Binod Verma & Co. delivers top-tier services tailored to your needs. Since 2008, we've been the premier choice in Laxmi Nagar, Delhi, known for our unparalleled efficiency, accessibility, and budget-friendly solutions. Trust us for reliable, professional, and results-oriented financial solutions. Contact us now to experience excellence in chartered accountancy.</p>
+
+                <script>
+                    const text = document.querySelector(".sec-text");
+                    const textLoad = () => {
+                        setTimeout(() => {
+                            text.textContent = "Audit & Assurance Companion";
+                        }, 1000);
+                        setTimeout(() => {
+                            text.textContent = "Taxation Guru";
+                        }, 2000);
+                        setTimeout(() => {
+                            text.textContent = "Accounting Expert";
+                        }, 4000);
+                        setTimeout(() => {
+                            text.textContent = "GST Specialist";
+                        }, 6000);
+                        setTimeout(() => {
+                            text.textContent = "Your Financial Partner";
+                        }, 8000); //1s = 1000 milliseconds
+                    }
+                    textLoad();
+                    setInterval(textLoad, 4000);
+                </script>
+                <a class="btn" href="{% url 'schedule_appointment' %}">Schedule Appointment!</a>
+            </div>
+            <div class="col-md-6" id="three-sec">
+                <!-- <img src="img/hero.png" alt="Image"> -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="{% static 'images/car1.jpg' %}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'images/car4.jpg' %}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'images/car3.jpg' %}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'images/car2.jpg' %}"class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="news">
+    {% include 'news.html' %}
+</div> -->
+<div class="latest-post">
+    {% get_latest_posts %}
+</div>
+
+<div class="service">
+    {% include 'service.html' %}
+</div>
+
+
+
+
+<div class="about">
+    {% include 'about.html' %}
+</div>
+
+<div class="faq">
+    {% include 'faq.html' %}
+</div>
+
+
+
+<div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=D-29,%20OFFICE%20NO-206,%20BETWEEN%20METRO%20PILLAR%20NO%20-%2033%20AND%2034,%20Laxmi%20Nagar,%20New%20Delhi,%20Delhi%20110092+(CA%20BINOD%20VERMA%20&amp;%20CO)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe></div>
+
+{% endblock %}
+

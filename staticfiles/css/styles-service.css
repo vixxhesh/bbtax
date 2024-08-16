@@ -1,0 +1,118 @@
+.service-row {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+    margin-bottom: 50px;
+}
+
+.service-row .service-row-img {
+    position: justify;
+    align-content: center;
+    width: 100%;
+    padding: 30 30px;
+    overflow: hidden;
+}
+
+.service-row .service-row-img img {
+    max-width: 100%;
+}
+
+@media(max-width: 767.98px) {
+    .service-row .service-row-img {
+        margin-bottom: 30px;
+    }
+}
+
+.service-row .service-row-text {
+    position: relative;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.service-row h2.section-title {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.service-row h2.section-title::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: rgb(235,193,0);
+    background: linear-gradient(90deg, rgba(235,193,0,1) 0%, rgba(231,202,35,1) 100%, rgba(0,212,255,1) 100%);
+    border-radius: 0 100% 100% 0;
+}
+
+.service-row p {
+    font-size: 16px;
+}
+
+.service-row a.btn {
+    margin-top: 15px;
+    padding: 10px 35px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(#4F84C4, #00539C);
+    transition: .5s;
+}
+
+.service-row a.btn:hover {
+    background: linear-gradient(#00539C, #4F84C4);
+}
+
+.service-row .service-row-col .col-sm-6 {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.service-row .service-row-col-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    padding: 8px 0;
+    text-align: center;
+    color: #ffffff;
+    background: #4F84C4;
+}
+.service-row .list-item{
+  list-style-image: url("img/arrow.png");
+
+}
+.service-row .service-row-col-text {
+    width: calc(100% - 55px);
+}
+
+.service-row .service-row-col-text h3 {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.service-row .service-row-col-text p {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .service-row .service-row-img,
+    .service-row .service-row-text {
+        padding: 0;
+    }
+}
+/*
+Service  */
+

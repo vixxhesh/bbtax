@@ -1,0 +1,22 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 3.5rem;
+    padding: 0 15px;
+    background: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        /* Add responsive styles for screens smaller than 768px */
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        /* Add responsive styles for screens smaller than 576px */
+    }
+}
+

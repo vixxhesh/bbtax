@@ -1,0 +1,128 @@
+.faqs {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+@media (min-width: 768px) {
+    .faqs .container-fluid {
+        padding: 0;
+    }
+
+    .faqs .row {
+        margin: 0;
+    }
+
+    .faqs .col-md-6:first-child {
+        padding: 0 60px;
+    }
+
+    .faqs .col-md-6:last-child {
+        padding: 0;
+    }
+}
+
+.faqs h2.section-title {
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.faqs h2.section-title::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, #4F84C4, #00539C, #4F84C4);
+    border-radius: 0 100% 100% 0;
+}
+
+.faqs .card {
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 0;
+}
+
+.faqs .card:last-child {
+    margin-bottom: 0;
+}
+
+.faqs .card-header {
+    padding: 0;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs .card-header a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px 12px 20px;
+    color: #213546;
+    font-size: 20px;
+    font-weight: 400;
+    background: #ffffff;
+    border: 2px solid #4F84C4;
+    border-radius: 0 30px 30px 0;
+}
+
+.faqs .card-header [data-toggle="collapse"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f067";
+    float: right;
+    color: #00539C;
+    font-size: 15px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f068";
+    float: right;
+    color: #00539C;
+    font-size: 15px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-body {
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs a.btn {
+    margin-top: 40px;
+    padding: 10px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(#4F84C4, #00539C);
+    transition: .5s;
+}
+
+.faqs a.btn:hover {
+    background: linear-gradient(#00539C, #4F84C4);
+}
+
+.faqs img {
+    max-width: 100%;
+    border-radius: 30px 0 0 30px;
+}
+
+@media (max-width: 767.98px) {
+    .faqs img {
+        margin-top: 30px;
+        border-radius: 0 0 30px 30px;
+    }
+}

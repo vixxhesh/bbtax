@@ -1,0 +1,28 @@
+.service-item div {
+    z-index: 1;
+}
+
+.service-item div::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 2px 2px 0 0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item div:hover::after {
+    width: 100%;
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}

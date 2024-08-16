@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Schedule Appointment{% endblock %}
+
+{% block content %}
+<h1 class=" text-uppercase" style="font-size: 3.2rem; letter-spacing: 0.3pt; font-weight: bolder; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:50px; padding-top: 20px; text-align: center;"> Choose your date for appointment </h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="{{ form.name.id_for_label }}" style="font-weight: bold; font-size: 18px;">
+            {{ form.name.label }}
+        </label>
+        {{ form.name }}
+        {% if form.name.errors %}
+            <div class="text-danger">
+                {{ form.name.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.email.id_for_label }}" style="font-weight: bold; font-size: 18px;">
+            {{ form.email.label }}
+        </label>
+        {{ form.email }}
+        {% if form.email.errors %}
+            <div class="text-danger">
+                {{ form.email.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.appointment_date.id_for_label }}" style="font-weight: bold; font-size: 18px;">
+            {{ form.appointment_date.label }}
+        </label>
+        {{ form.appointment_date }}
+        {% if form.appointment_date.errors %}
+            <div class="text-danger">
+                {{ form.appointment_date.errors }}
+            </div>
+        {% endif %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

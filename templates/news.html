@@ -1,0 +1,76 @@
+{% load static %}
+
+<div class="news">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h2>Latest News</h2>
+            <p>Stay updated with the latest news and updates from the world of finance and accounting.</p>
+        </div>
+        <div class="row" id="news-container">
+            <!-- News items will be dynamically added here -->
+        </div>
+    </div>
+</div>
+
+<style>
+    .news-item {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .news-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 767px) {
+        .news-item {
+            font-size: 12px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .news-item {
+            font-size: 13px;
+        }
+    }
+</style>
+
+<script>
+    // Fetch news data from the API
+    fetch('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=bbec7776cc884c1a859b893e7135900a')
+    .then(response => response.json())
+    .then(data => {
+        if (data.status !== 'ok') {
+            console.error('API Error:', data.message || 'Unknown error');
+            return;
+        }
+
+        const newsContainer = document.getElementById('news-container');
+
+        if (data.articles && data.articles.length > 0) {
+            data.articles.slice(0, 6).forEach(article => {
+                if (article.urlToImage) {
+                    const newsItem = document.createElement('div');
+                    newsItem.classList.add('col-md-4');
+                    newsItem.innerHTML = `
+                        <div class="news-item">
+                            <img src="${article.urlToImage}" alt="News">
+                            <h2>${article.title}</h2>
+                            <p>${article.description}</p>
+                            <a href="${article.url}" class="btn btn-outline-info">Read More</a>
+                        </div>
+                    `;
+                    newsContainer.appendChild(newsItem);
+                }
+            });
+        } else {
+            console.error('No articles found in the API response.');
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching news:', error);
+    });
+
+</script>

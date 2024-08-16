@@ -1,0 +1,22 @@
+/* static/css/latest_posts.css */
+.latest-posts-card {
+    max-width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    font-size: large;
+}
+
+.latest-posts-body {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.post-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}

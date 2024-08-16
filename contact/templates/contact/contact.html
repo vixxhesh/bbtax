@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+{% load static %}
+{% block content %}
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-info">
+                    <div style="width: 100%">
+                        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=D-29,%20OFFICE%20NO-206,%20BETWEEN%20METRO%20PILLAR%20NO%20-%2033%20AND%2034,%20Laxmi%20Nagar,%20New%20Delhi,%20Delhi%20110092+(CA%20BINOD%20VERMA%20&amp;%20CO)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        </iframe>
+                    </div>
+                    <h3>How to reach us:</h3>
+                    <p>Nearest metro station: Laxmi Nagar</p>
+                    <p>D-29, OFFICE NO-206, BETWEEN METRO PILLAR NO - 33 AND 34, Laxmi Nagar, New Delhi, Delhi 110092</p>
+                    <h3>Mobile <span>011 4022 4920</span></h3>
+                    <h3>E-mail <span>accounts@bindoverma.com</span></h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="editor-info">
+                    <h2 class="section-title">Contact Person</h2>
+                    <div class="editor-item">
+                        <div class="editor-img">
+                            <img src="{% static 'img/pp.jpg' %}" alt="Editor Image">
+                        </div>
+                        <div class="editor-text">
+                            <h3>CA Binod Verma</h3>
+                            <a href="mailto:accounts@binodverma.com">Email Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container" >
+        <h1 class="text-center">Drop your queries!</h1>
+        <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary" style="margin-bottom: 30px; width: 100%; font-weight: 700; margin-top: 20px;">Submit</button>
+        </form>
+    </div>
+{% endblock %}

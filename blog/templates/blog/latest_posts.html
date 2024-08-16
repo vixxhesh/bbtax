@@ -1,0 +1,16 @@
+<!-- templates/blog/latest_posts.html -->
+<div class="card latest-posts-card">
+    <div class="card-header">
+        Latest Posts
+    </div>
+    <div class="card-body latest-posts-body">
+        <ul class="list-group">
+            {% for post in latest_posts %}
+                <li class="list-group-item">
+                    <a href="{% url 'post_detail' post.pk %}" class="post-title">{{ post.title }}</a>
+                    <small class="text-muted d-block">{{ post.created_at }}</small>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
