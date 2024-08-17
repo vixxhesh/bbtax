@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'contact',
     'adminp',
     'resource_store',
-    'tinymce',
     'implinks',
 ]
 MEDIA_URL = '/media/'
@@ -80,12 +79,18 @@ DEBUG = True
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
+
 # spiderweb/settings.py
 # settings.py
 
@@ -154,14 +159,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-TINYMCE_DEFAULT_CONFIG = {
-    'height': 360,  # Increased height for better visibility
-    'width': '100%',  # Make the editor responsive
-    'menubar': False,  # Hide the menubar to simplify the interface
-    'plugins': 'advlist autolink lists link charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount',
-    'toolbar': 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
-    'content_css': 'css/content.css',  # Include a custom CSS file if needed
-    'contextmenu': 'formats | link image',  # Add a context menu for easier formatting
-    'statusbar': True,  # Display the status bar at the bottom
-    'branding': False,  # Remove the TinyMCE branding
-}
+
+ALLOWED_HOSTS = ['your-domain.com', 'your-app.herokuapp.com']
+
+
+DEBUG = False
+CSRF_COOKIE_SECURE = True
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY'
+
