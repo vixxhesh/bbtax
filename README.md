@@ -1,8 +1,8 @@
-# SpiderWeb
+# BBTax
 
 ## Overview
 
-**SpiderWeb** is a full-stack Django web application designed to manage blogs, appointments, contacts, and resources. This project provides an admin panel for authorized users to manage various aspects of the application and allows general users to interact with the blog and resource management functionalities.
+**BBTax** is a full-stack Django web application designed to manage blogs, appointments, contacts, and resources. This project provides an admin panel for authorized users to manage various aspects of the application and allows general users to interact with the blog and resource management functionalities.
 
 ## Features
 
