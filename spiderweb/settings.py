@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%z88$&huycw6@u%i7-0e#h^_3+ffna$^uk+fvsm=9&=-6rsnz$'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -160,10 +160,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-ALLOWED_HOSTS = ['your-domain.com', 'your-app.herokuapp.com']
+ALLOWED_HOSTS = []
 
-
-DEBUG = False
 CSRF_COOKIE_SECURE = True
 SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'
